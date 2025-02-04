@@ -1,0 +1,134 @@
+/* Coin.css */
+
+/* Root container styling */
+.coin {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #121212; /* Dark background for card */
+  color: #ffffff; /* Text color */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-family: 'Arial', sans-serif;
+  position: relative;
+}
+
+/* Center-align content for coin name and image */
+.coin-name {
+  text-align: center;
+  margin-bottom: 20px; /* Space below coin name */
+}
+
+/* Styling for the coin logo (Image) */
+.coin-name img {
+  width: 100px; /* Larger coin image size */
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 2px solid #f7931a; /* Example color for Bitcoin */
+  display: block; /* Ensures it is centered */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Styling for the coin name and symbol */
+.coin-name p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.coin-name p:first-of-type {
+  font-size: 24px; /* Larger font for name */
+  font-weight: bold;
+  color: #f7931a; /* Highlighting coin name color */
+}
+
+.coin-name p:nth-of-type(2) {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #aaa; /* Muted color for symbol */
+}
+
+.coin-name p:nth-of-type(3) {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.coin-name p:nth-of-type(4) {
+  font-size: 16px;
+  margin-top: 20px;
+  text-align: justify; /* Improve readability */
+}
+
+/* Links inside the description */
+.coin-name a {
+  color: #f7931a; /* Match Bitcoin orange */
+  text-decoration: none;
+}
+
+.coin-name a:hover {
+  text-decoration: underline;
+}
+
+/* Coin chart container */
+.coin-chart {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Coin info styling */
+.coin-info {
+  margin-top: 30px;
+}
+
+.coin-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.coin-info li:first-of-type {
+  font-weight: bold;
+  color: #f7931a; /* Highlight labels */
+}
+
+.coin-info li:nth-of-type(2) {
+  color: #ccc; /* Lighter color for values */
+}
+
+/* Responsive styling */
+@media screen and (max-width: 768px) {
+  .coin {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .coin-name img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .coin-name p:first-of-type {
+    font-size: 20px;
+  }
+
+  .coin-name p:nth-of-type(3) {
+    font-size: 18px;
+  }
+
+  .coin-name p:nth-of-type(4) {
+    font-size: 14px;
+  }
+
+  .coin-info {
+    margin-top: 20px;
+  }
+
+  .coin-info ul {
+    font-size: 14px;
+  }
+
+  .coin-info li:first-of-type {
+    font-size: 16px;
+  }
+}

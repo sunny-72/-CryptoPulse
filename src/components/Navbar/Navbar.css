@@ -1,0 +1,121 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    color: #fff;
+    background: linear-gradient(90deg, #0548f0, #203a43, #2c5364);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+/* Logo */
+.navbar .logo {
+    width: max(12vw, 120px);
+    transition: transform 0.3s;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
+}
+
+/* Menu Items */
+.navbar ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /* Wrap items for smaller screens */
+    justify-content: center;
+}
+
+.navbar li {
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 0.3s;
+}
+
+.navbar li:hover {
+    color: #ffcc00;
+}
+
+/* Responsive Menu for Mobile Screens */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 20px; /* Increased spacing between items */
+    }
+
+    .navbar {
+        padding: 15px 5%; /* Reduced padding for smaller screens */
+    }
+}
+
+/* Right Section */
+.navbar .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Dropdown Menu */
+.navbar select {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #3c3c3c, #5c5c5c);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.navbar select:hover {
+    background: #4a4a4a;
+    color: #ffcc00;
+}
+
+/* Button */
+.navbar button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #ff8008, #ffc837);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(255, 128, 8, 0.3);
+}
+
+.navbar button:hover {
+    background: linear-gradient(90deg, #e67e22, #f1c40f);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 200, 55, 0.5);
+}
+
+.navbar button img {
+    width: 16px;
+    height: 16px;
+    filter: invert(1);
+}
+
+/* Responsive Button */
+@media (max-width: 768px) {
+    .navbar .nav-right {
+        flex-direction: column;
+        gap: 10px; /* Reduced gap for smaller screens */
+    }
+}
+

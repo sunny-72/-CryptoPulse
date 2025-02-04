@@ -1,0 +1,285 @@
+/* Home.css */
+.home {
+    padding: 20px 10px; /* Add some spacing */
+    padding-bottom: 100px;
+    background: linear-gradient(120deg, #1e3c72, #2a5298); /* Gradient background */
+    color: #fff; /* Text color for better contrast */
+    font-family: 'Montserrat', sans-serif; /* Modern font */
+}
+
+/* Hero Section */
+.hero {
+    max-width: 600px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.hero h1 {
+    font-size: max(4vw, 36px);
+    font-weight: bold;
+    line-height: 1.2;
+    color: #ffcc00; /* Vibrant title color */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ddd; /* Subtle text color */
+}
+
+/* Form Section */
+.hero form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+
+.hero input {
+    padding: 10px 15px;
+    width: 70%; /* Adjust input width */
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.hero input:focus {
+    border-color: #ffcc00; /* Highlight border on focus */
+    background: #fff; /* Lighter background */
+}
+
+.hero button {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #ff8008, #ffc837); /* Vibrant gradient */
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 128, 8, 0.3); /* Subtle shadow */
+}
+
+.hero button:hover {
+    background: linear-gradient(90deg, #e67e22, #f1c40f); /* Slightly different gradient on hover */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(255, 200, 55, 0.5); /* Stronger shadow */
+}
+
+
+
+/* Crypto Table Section */
+.crypto-table {
+    max-width: 800px;
+    margin: 20px auto; /* Center the table with some spacing */
+    background: linear-gradient(rgba(84, 3, 255, 0.15), rgba(105, 2, 153, 0.15));
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    padding: 15px; /* Add padding around the table */
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* Light font color */
+ }
+ 
+ .crypto-table .table-layout {
+     display: grid;
+     grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr; /* Flexible column layout */
+     padding: 15px 20px;
+     align-items: center; /* Vertically center content */
+     border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+     font-size: 1rem; /* Standard font size */
+ }
+ 
+ .crypto-table .table-layout p {
+     margin: 0;
+     padding: 5px;
+ }
+ 
+ .crypto-table .market-cap {
+     text-align: right; /* Align the Market Cap column to the right */
+ }
+ 
+ .crypto-table .table-layout p:nth-child(4) {
+     text-align: center; /* Center the 24H Change column */
+ }
+ 
+ /* Table Hover Effect */
+ .crypto-table .table-layout:hover {
+     background: rgba(255, 255, 255, 0.1); /* Highlight row on hover */
+     cursor: pointer;
+ }
+ 
+
+ .table-layout:last-child{
+    border: none;
+ }
+
+ .table-layout div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+ }
+
+ .table-layout div img {
+    width: 35px;
+ }
+
+ .table-layout .green{
+    color: #00d515;
+    text-align: center;
+ }
+
+ .table-layout .red{
+    color: #ff4646;
+    text-align: center;
+ }
+
+
+
+
+
+
+
+
+
+
+
+ /* Responsive Design */
+
+/* General: Adjust layout for smaller screens */
+@media (max-width: 1024px) {
+    .hero h1 {
+      font-size: 32px; /* Smaller title */
+    }
+  
+    .hero p {
+      font-size: 1rem; /* Adjust text size */
+    }
+  
+    .hero input {
+      width: 100%; /* Input takes full width */
+    }
+  
+    .crypto-table .table-layout {
+      grid-template-columns: 0.6fr 2fr 1fr; /* Adjust table layout */
+      font-size: 0.9rem; /* Smaller font */
+    }
+  
+    .crypto-table .table-layout p:nth-child(4), 
+    .crypto-table .market-cap {
+      display: none; /* Hide less important columns on smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      margin: 60px 20px; /* Smaller margin for compact view */
+    }
+  
+    .crypto-table {
+      max-width: 90%; /* Reduce width on smaller screens */
+    }
+  
+    .table-layout div img {
+      width: 30px; /* Adjust coin image size */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 24px; /* Smaller title on very small screens */
+    }
+  
+    .hero p {
+      font-size: 0.9rem; /* Adjust text size for smaller devices */
+    }
+  
+    .hero form {
+      flex-direction: column; /* Stack input and button vertically */
+      gap: 10px;
+    }
+  
+    .hero input, .hero button {
+      width: 100%; /* Full width for form elements */
+    }
+  
+    .crypto-table .table-layout {
+      grid-template-columns: 0.7fr 2fr; /* Reduce columns further */
+    }
+  
+    .crypto-table {
+      font-size: 0.8rem; /* Adjust font size for smaller screens */
+    }
+  }
+  
+
+
+
+  /* Form styling */
+.hero form {
+  position: relative; /* Ensure relative positioning for child elements */
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Input field styling */
+.hero input {
+  padding: 10px 15px;
+  width: 70%; /* Adjust input width */
+  border: 2px solid #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+/* Datalist dropdown styling */
+datalist {
+  position: absolute; /* Position relative to form */
+  top: calc(100% + 5px); /* Place it just below the input field */
+  left: 0;
+  z-index: 1000; /* Ensure it appears above other elements */
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 200px; /* Optional: limit height if there are many options */
+  overflow-y: auto; /* Scrollable if options exceed max-height */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Individual option styling */
+datalist option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* On focus or hover */
+datalist option:hover {
+  background-color: #f0f0f0;
+}
+
+/* Button styling remains the same */
+.hero button {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ff8008, #ffc837);
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 128, 8, 0.3);
+}
